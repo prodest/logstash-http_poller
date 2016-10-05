@@ -1,6 +1,6 @@
-FROM logstash:2.4
+FROM logstash:1.5.6-1
 
-RUN logstash-plugin install logstash-input-http_poller
+RUN plugin install logstash-input-http_poller
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["-e", ""]
